@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <script th:src="@{jquery/jquery.min.js}" type="text/javascript"></script>
+    <title>Title</title>
+</head>
+<body>
+<span th:text="${single.userName}"></span>
+<div th:if="${not #lists.isEmpty(users)}">
+    <table th:each="user:${users}">
+        <tr>
+            <td><span th:text="${user.openId}"></span></td>
+            <td><span th:text="${user.userName}"></span></td>
+        </tr>
+    </table>
+</div>
+</body>
+</html>
